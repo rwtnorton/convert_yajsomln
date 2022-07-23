@@ -27,7 +27,7 @@ func init() {
 	flag.Parse()
 
 	if fromJSON == fromYAML {
-		fmt.Fprintf(flag.CommandLine.Output(), "must select only one of --from_json or --from_yaml\n")
+		_, _ = fmt.Fprintf(flag.CommandLine.Output(), "must select only one of --from_json or --from_yaml\n")
 		flag.Usage()
 		os.Exit(1)
 	}
